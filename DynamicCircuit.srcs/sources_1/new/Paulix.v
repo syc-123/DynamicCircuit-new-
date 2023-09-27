@@ -30,4 +30,10 @@ module Paulix(A,B
     reg [7:0] A1 [0:1];
     reg [7:0] B1 [0:1];
     
+    always@ (A or B)
+    begin
+//        B[0] = A[1];
+//        B[1] = A[0];
+    end
+    
 endmodule
