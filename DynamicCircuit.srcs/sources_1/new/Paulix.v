@@ -19,21 +19,21 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//The input qubit is Q = [c0; c1] is a 2x1 matrix, where c0 stands for the coefficient of |0> and c1 for |1>. c0, c1 are both complex numbers.
+// Both i_q0 and i_q1 are 32-bit signals.
+// i_q0 [31:16] refers to the real part of c0, i_q0 [15:0] refers to the imagine part of c0
+// i_q1 [31:16] refers to the real part of c1, i_q1 [15:0] refers to the imagine part of c1
+// All coefficient are 16-bit fixed point signed decimals. The first bit is a sign identifier, where 0 indicates positive and 1 indicates negative.
+// The range of all coefficients is within -1 to 1.
 
-module Paulix(A,B
-              
+module Paulix(    
+    input signed [31:0] i_q0,
+    input signed [31:0] i_q1,
+    output signed [31:0] o_q0,
+    output signed [31:0] o_q1              
     );
-    //The input qubit is [c0; c1] which is a 2x1 matrix
-    input [15:0] A;
-    output [15:0] B;
-    //Internal variables
-    reg [7:0] A1 [0:1];
-    reg [7:0] B1 [0:1];
-    
-    always@ (A or B)
-    begin
-//        B[0] = A[1];
-//        B[1] = A[0];
-    end
-    
+
+    assign o_q0 = i_q1;
+    assign o_q1 = i_q0;
+       
 endmodule

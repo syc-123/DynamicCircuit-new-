@@ -20,7 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Pauliy(
-
+module Pauliy(    
+    input signed [31:0] i_q0,
+    input signed [31:0] i_q1,
+    output signed [31:0] o_q0,
+    output signed [31:0] o_q1
     );
+
+    
+    assign o_q0 = {i_q1[15:0],(0-i_q1[31:16])};
+    assign o_q1 = {(0-i_q0[15:0]),i_q1[31:16]};
+    
 endmodule
