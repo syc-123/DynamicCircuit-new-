@@ -29,7 +29,7 @@ module RingOscillator#(
     
     wire [STAGE-1:0] wi;
     
-    reg rout /* synthesis keep */;
+//    reg rout /* synthesis keep */;
         
     and a(wi[STAGE-1],r_out,start);
     

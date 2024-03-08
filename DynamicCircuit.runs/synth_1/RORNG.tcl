@@ -71,8 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 5
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -83,6 +82,7 @@ set_property webtalk.parent_dir D:/Quantum/DynamicCircuit/DynamicCircuit.cache/w
 set_property parent.project_path D:/Quantum/DynamicCircuit/DynamicCircuit.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property board_part digilentinc.com:cmod_a7-35t:part0:1.2 [current_project]
 set_property ip_output_repo d:/Quantum/DynamicCircuit/DynamicCircuit.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -101,14 +101,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/SYC/Downloads/Arty-A7-35-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/SYC/Downloads/Arty-A7-35-Master.xdc]
+read_xdc D:/Quantum/DynamicCircuit/Cmod-A7-Master.xdc
+set_property used_in_implementation false [get_files D:/Quantum/DynamicCircuit/Cmod-A7-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top RORNG -part xc7a35tcpg236-1
+synth_design -top RORNG -part xc7a35tcpg236-1 -flatten_hierarchy none
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
