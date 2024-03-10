@@ -21,20 +21,17 @@
 
 
 module QMeasure(
+    input sysclk,
     input signed [31:0] i_qubit,
     output Q_value
-//    output measure_done
+//    output Measure_done
     );
     
     reg Q_value_r = 0;    
     reg signed [31:0] intermediate_prob0 = 0;
 //    reg signed [31:0] intermediate_prob1 = 0;
-    reg [31:0]RNGvalue = 32'h0000;
-    
-    integer i;
-    reg [5:0] ones;
-
-
+    wire RNGvalue;
+    reg [7:0] MSB;
 //    genvar i;
     
 //    generate
@@ -42,16 +39,30 @@ module QMeasure(
 ////            RNGvalue[i] = load RNG
 //        end    
 //    endgenerate
+
+    RORNG RNG(sysclk, 1'b1, RNGvalue);
+ 
+    integer counter = 0;
+    
+    always@(posedge sysclk)begin
+        if(counter == 8)begin
+           counter <= 0;
+        end else begin
+           MSB[counter] <= RNGvalue;
+           counter <= counter + 1;
+        end
+    end
     
     always@(i_qubit)
     begin
         intermediate_prob0 = i_qubit[31:16] * i_qubit[31:16];
-//        intermediate_prob1 = i_qubit[15:0] * i_qubit[15:0];
-        
-        ones = 0;
-        for(i=0;i<32;i=i+1)
-            ones = ones + intermediate_prob0[i];
+        if(intermediate_prob0[31:24]<MSB)begin
+            Q_value_r <= 1'b0;
+        end else begin
+            Q_value_r <= 1'b1;
+        end
     end
 
+    assign Q_value = Q_value_r;
     
 endmodule

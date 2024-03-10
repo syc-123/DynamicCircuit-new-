@@ -22,10 +22,11 @@
 
 module QValid(
     input signed [31:0] i_qubit,
-    output Q_valid
+    output signed [31:0] o_qubit,
+    output [1:0] Q_valid
     );
     
-    reg Q_valid_r = 0;
+    reg [1:0] Q_valid_r = 2'b00;
     reg signed [31:0] intermediate_prob0 = 0;
     reg signed [31:0] intermediate_prob1 = 0;
     
@@ -35,11 +36,11 @@ module QValid(
         intermediate_prob1 = i_qubit[15:0] * i_qubit[15:0];
         
         if(intermediate_prob0 + intermediate_prob1<32'h7e00)
-            Q_valid_r = 0;
+            Q_valid_r = 2'b00;
         else if(intermediate_prob0 + intermediate_prob1>32'h7fff) begin
-            Q_valid_r = 0;
+            Q_valid_r = 2'b00;
         end else
-            Q_valid_r = 1;
+            Q_valid_r = 2'b01;
     end   
         //if the sum of two probability is 1, then the qubit is valid, else invalid
         //if(intermediate_prob0 + intermediate_prob1 == 32'hffff)
@@ -47,6 +48,7 @@ module QValid(
         // maybe > ff00? >0.99999
         //  Q_valid <= 1;
      assign Q_valid = Q_valid_r;
+     assign o_qubit = i_qubit;
      
         
     //truncate will decrease the precision of result

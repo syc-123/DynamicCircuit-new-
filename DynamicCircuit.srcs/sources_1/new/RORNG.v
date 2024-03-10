@@ -34,7 +34,7 @@ module RORNG#(
     wire [RO_STAGE-1:0] ro_out;
     wire [RO_STAGE-1:0] ff_out;
     reg r_XOR;
-    integer j;
+    
     reg clk_slow = 1'b0;
     integer counter = 0;
     //change when need
@@ -68,14 +68,9 @@ module RORNG#(
                                                  
         end
     endgenerate
-    
+
     always@(*) begin
-    for(j=0;j<RO_STAGE-1;j=j+1)begin
-        if(j==0)
-            r_XOR <= ff_out[j] ^ ff_out[j+1];
-        else
-            r_XOR <= r_XOR ^ ff_out[j+1];
-        end
+        r_XOR <= ^ff_out;
     end
     
     FDRE #(
