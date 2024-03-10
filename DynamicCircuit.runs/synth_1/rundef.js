@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log RORNG.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RORNG.tcl" );
+         "-log RORNG_tx.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RORNG_tx.tcl" );
 
 
 

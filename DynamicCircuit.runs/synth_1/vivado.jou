@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Mar  8 01:41:44 2024
-# Process ID: 6408
+# Start of session at: Sun Mar 10 15:22:29 2024
+# Process ID: 5588
 # Current directory: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/synth_1
-# Command line: vivado.exe -log RORNG.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RORNG.tcl
-# Log file: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/synth_1/RORNG.vds
+# Command line: vivado.exe -log RORNG_tx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RORNG_tx.tcl
+# Log file: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/synth_1/RORNG_tx.vds
 # Journal file: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source RORNG.tcl -notrace
+source RORNG_tx.tcl -notrace

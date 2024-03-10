@@ -21,7 +21,7 @@
 
 
 module RORNG#(
-    parameter RO_STAGE = 4
+    parameter RO_STAGE = 2
     )(
     input sysclk,
     input En,
@@ -54,13 +54,13 @@ module RORNG#(
     
     generate
         for(i=0;i<RO_STAGE;i=i+1) begin
-            RingOscillator ro(En_n,ro_out[i]);
+            RingOscillator ro(En,ro_out[i]);
             
             FDRE #(
                 .INIT(1'b0) // Initial value of register (1'b0 or 1'b1)
             ) RO_DFF (
                 .Q(ff_out[i]),      // 1-bit Data output
-                .C(clk_slow),      // 1-bit Clock input
+                .C(sysclk),      // 1-bit Clock input
                 .CE(1'b1),    // 1-bit Clock enable input
                 .R(1'b0),      // 1-bit Synchronous reset input
                 .D(ro_out[i])       // 1-bit Data input
@@ -77,13 +77,10 @@ module RORNG#(
      .INIT(1'b0) // Initial value of register (1'b0 or 1'b1)
      ) DFF (
      .Q(rn_out),      // 1-bit Data output
-     .C(clk_slow),      // 1-bit Clock input
+     .C(sysclk),      // 1-bit Clock input
      .CE(1'b1),    // 1-bit Clock enable input
      .R(1'b0),      // 1-bit Synchronous reset input
      .D(r_XOR)       // 1-bit Data input
             );
-    
-    
-//    assign rn_out = r_XOR;    
-    
+        
 endmodule

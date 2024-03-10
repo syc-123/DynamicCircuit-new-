@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log RORNG.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RORNG.tcl
+EAStep vivado -log RORNG_tx.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RORNG_tx.tcl
