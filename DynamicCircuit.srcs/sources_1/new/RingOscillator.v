@@ -21,7 +21,7 @@
 
 
 module RingOscillator#(
-        parameter STAGE = 75
+        parameter STAGE = 5
     )(
     input start,
     output r_out

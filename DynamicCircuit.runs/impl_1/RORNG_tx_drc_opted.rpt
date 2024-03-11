@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sun Mar 10 15:23:11 2024
-| Host         : DESKTOP-LINHK1M running 64-bit major release  (build 9200)
+| Date         : Mon Mar 11 09:32:58 2024
+| Host         : DESKTOP-EGPAV6K running 64-bit major release  (build 9200)
 | Command      : report_drc -file RORNG_tx_drc_opted.rpt -pb RORNG_tx_drc_opted.pb -rpx RORNG_tx_drc_opted.rpx
 | Design       : RORNG_tx
 | Device       : xc7a35tcpg236-1
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 3
+             Violations found: 2
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| LUTLP-2  | Warning  | Combinatorial Loop Allowed                          | 2          |
+| LUTLP-2  | Warning  | Combinatorial Loop Allowed                          | 1          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -50,11 +50,6 @@ Related violations: <none>
 LUTLP-2#1 Warning
 Combinatorial Loop Allowed  
 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro/genblk1[0].ro/xn/LUT1_inst.
-Related violations: <none>
-
-LUTLP-2#2 Warning
-Combinatorial Loop Allowed  
-1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro/genblk1[1].ro/xn/LUT1_inst.
 Related violations: <none>
 
 

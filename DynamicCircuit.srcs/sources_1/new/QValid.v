@@ -23,24 +23,24 @@
 module QValid(
     input signed [31:0] i_qubit,
     output signed [31:0] o_qubit,
-    output [1:0] Q_valid
+    output Q_valid
     );
     
-    reg [1:0] Q_valid_r = 2'b00;
+    reg Q_valid_r = 1'b1;
     reg signed [31:0] intermediate_prob0 = 0;
     reg signed [31:0] intermediate_prob1 = 0;
     
     always@(i_qubit)
     begin
-        intermediate_prob0 = i_qubit[31:16] * i_qubit[31:16];
-        intermediate_prob1 = i_qubit[15:0] * i_qubit[15:0];
+        intermediate_prob0 <= i_qubit[31:16] * i_qubit[31:16];
+        intermediate_prob1 <= i_qubit[15:0] * i_qubit[15:0];
         
-        if(intermediate_prob0 + intermediate_prob1<32'h7e00)
-            Q_valid_r = 2'b00;
-        else if(intermediate_prob0 + intermediate_prob1>32'h7fff) begin
-            Q_valid_r = 2'b00;
+        if(intermediate_prob0 + intermediate_prob1 < 32'h3e00)
+            Q_valid_r <= 1'b0;
+        else if(intermediate_prob0 + intermediate_prob1>32'h3fff) begin
+            Q_valid_r <= 1'b0;
         end else
-            Q_valid_r = 2'b01;
+            Q_valid_r = 1'b1;
     end   
         //if the sum of two probability is 1, then the qubit is valid, else invalid
         //if(intermediate_prob0 + intermediate_prob1 == 32'hffff)
@@ -48,11 +48,6 @@ module QValid(
         // maybe > ff00? >0.99999
         //  Q_valid <= 1;
      assign Q_valid = Q_valid_r;
-     assign o_qubit = i_qubit;
-     
-        
-    //truncate will decrease the precision of result
-//    assign prob_0 = intermediate_prob0[31:16];
-//    assign prob_1 = intermediate_prob1[31:16];        
+     assign o_qubit = i_qubit;     
     
 endmodule

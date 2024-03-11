@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sun Mar 10 15:23:23 2024
-| Host         : DESKTOP-LINHK1M running 64-bit major release  (build 9200)
+| Date         : Mon Mar 11 09:33:49 2024
+| Host         : DESKTOP-EGPAV6K running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file RORNG_tx_timing_summary_routed.rpt -pb RORNG_tx_timing_summary_routed.pb -rpx RORNG_tx_timing_summary_routed.rpx -warn_on_violation
 | Design       : RORNG_tx
 | Device       : 7a35t-cpg236
@@ -39,22 +39,22 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (25)
+1. checking no_clock (24)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (40)
+4. checking unconstrained_internal_endpoints (39)
 5. checking no_input_delay (0)
 6. checking no_output_delay (1)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
-9. checking loops (2)
+9. checking loops (1)
 10. checking partial_input_delay (0)
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (25)
+1. checking no_clock (24)
 -------------------------
- There are 25 register/latch pins with no clock driven by root clock pin: sysclk (HIGH)
+ There are 24 register/latch pins with no clock driven by root clock pin: sysclk (HIGH)
 
 
 2. checking constant_clock (0)
@@ -67,9 +67,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (40)
+4. checking unconstrained_internal_endpoints (39)
 -------------------------------------------------
- There are 40 pins that are not constrained for maximum delay. (HIGH)
+ There are 39 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -100,9 +100,9 @@ Table of Contents
  There are 0 generated clocks that are not connected to a clock source.
 
 
-9. checking loops (2)
+9. checking loops (1)
 ---------------------
- There are 2 combinational loops in the design. (HIGH)
+ There is 1 combinational loop in the design. (HIGH)
 
 
 10. checking partial_input_delay (0)

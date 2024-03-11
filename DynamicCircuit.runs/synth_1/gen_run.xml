@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710098548">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710163815">
   <File Type="PA-TCL" Name="RORNG_tx.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="RORNG_tx_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="RORNG_tx_reports.tcl"/>
   <File Type="RDS-RDS" Name="RORNG_tx.vds"/>
   <File Type="RDS-UTIL" Name="RORNG_tx_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="RORNG_tx_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="RORNG_tx.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="RORNG_tx_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="RORNG_tx_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/RORNG.v">
@@ -125,13 +122,6 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="C:/Users/SYC/Downloads/Arty-A7-35-Master.xdc">
-      <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/Cmod-A7-Master.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>

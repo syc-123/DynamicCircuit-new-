@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sun Mar 10 15:23:13 2024
-| Host         : DESKTOP-LINHK1M running 64-bit major release  (build 9200)
+| Date         : Mon Mar 11 09:33:11 2024
+| Host         : DESKTOP-EGPAV6K running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file RORNG_tx_control_sets_placed.rpt
 | Design       : RORNG_tx
 | Device       : xc7a35t
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     3 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    15 |
+| Unused register locations in slices containing registers |     8 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,7 +58,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              17 |            5 |
+| No           | No                    | No                     |              16 |            3 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               1 |            1 |
@@ -75,7 +75,7 @@ Table of Contents
 +-------------------+----------------------+-----------------------+------------------+----------------+--------------+
 |  sysclk_IBUF_BUFG | rouart/r_SM_Main[2]  |                       |                1 |              1 |         1.00 |
 |  sysclk_IBUF_BUFG | rouart/r_Clock_Count | rouart/r_Clock_Count0 |                2 |              7 |         3.50 |
-|  sysclk_IBUF_BUFG |                      |                       |                5 |             17 |         3.40 |
+|  sysclk_IBUF_BUFG |                      |                       |                3 |             16 |         5.33 |
 +-------------------+----------------------+-----------------------+------------------+----------------+--------------+
 
 

@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Sun Mar 10 15:23:23 2024
-| Host             : DESKTOP-LINHK1M running 64-bit major release  (build 9200)
+| Date             : Mon Mar 11 09:33:49 2024
+| Host             : DESKTOP-EGPAV6K running 64-bit major release  (build 9200)
 | Command          : report_power -file RORNG_tx_power_routed.rpt -pb RORNG_tx_power_summary_routed.pb -rpx RORNG_tx_power_routed.rpx
 | Design           : RORNG_tx
 | Device           : xc7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.714        |
+| Total On-Chip Power (W)  | 1.694        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.638        |
+| Dynamic (W)              | 1.618        |
 | Device Static (W)        | 0.076        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 76.4         |
-| Junction Temperature (C) | 33.6         |
+| Max Ambient (C)          | 76.5         |
+| Junction Temperature (C) | 33.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.085 |       65 |       --- |             --- |
-|   LUT as Logic |     0.073 |       24 |     20800 |            0.12 |
+| Slice Logic    |     0.078 |       62 |       --- |             --- |
+|   LUT as Logic |     0.067 |       22 |     20800 |            0.11 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Register     |     0.006 |       25 |     41600 |            0.06 |
+|   Register     |     0.005 |       24 |     41600 |            0.06 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |     0.061 |       39 |       --- |             --- |
-| I/O            |     1.493 |        2 |       106 |            1.89 |
+| Signals        |     0.048 |       37 |       --- |             --- |
+| I/O            |     1.492 |        2 |       106 |            1.89 |
 | Static Power   |     0.076 |          |           |                 |
-| Total          |     1.714 |          |           |                 |
+| Total          |     1.694 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,7 +70,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.163 |       0.150 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.143 |       0.130 |      0.013 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.067 |       0.055 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.422 |       0.421 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -137,13 +137,11 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| RORNG_tx          |     1.638 |
-|   ro              |     0.012 |
-|     genblk1[0].ro |     0.004 |
-|       xn          |     0.004 |
-|     genblk1[1].ro |     0.001 |
-|       xn          |     0.001 |
-|   rouart          |     0.119 |
+| RORNG_tx          |     1.618 |
+|   ro              |     0.007 |
+|     genblk1[0].ro |     0.002 |
+|       xn          |     0.002 |
+|   rouart          |     0.105 |
 +-------------------+-----------+
 
 

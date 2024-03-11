@@ -1,6 +1,6 @@
 # allow combinatorial loop
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[0].ro/xn/y];
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[1].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[1].ro/xn/y];
 #set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[2].ro/xn/y];
 #set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[3].ro/xn/y];
 

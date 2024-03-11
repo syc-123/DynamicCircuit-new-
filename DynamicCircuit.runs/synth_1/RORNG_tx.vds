@@ -2,12 +2,12 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Mar 10 15:22:29 2024
-# Process ID: 5588
-# Current directory: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/synth_1
+# Start of session at: Mon Mar 11 09:30:24 2024
+# Process ID: 33180
+# Current directory: D:/Quantum/DynamicCircuit-new-/DynamicCircuit.runs/synth_1
 # Command line: vivado.exe -log RORNG_tx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RORNG_tx.tcl
-# Log file: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/synth_1/RORNG_tx.vds
-# Journal file: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/synth_1\vivado.jou
+# Log file: D:/Quantum/DynamicCircuit-new-/DynamicCircuit.runs/synth_1/RORNG_tx.vds
+# Journal file: D:/Quantum/DynamicCircuit-new-/DynamicCircuit.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source RORNG_tx.tcl -notrace
 Command: synth_design -top RORNG_tx -part xc7a35tcpg236-1 -flatten_hierarchy none
@@ -17,89 +17,89 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 20128
-WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/uart_tx.v:44]
-WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/uart_tx.v:45]
-WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/uart_tx.v:46]
-WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/uart_tx.v:47]
-WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/uart_tx.v:48]
+INFO: [Synth 8-7075] Helper process launched with PID 624
+WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/uart_tx.v:44]
+WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/uart_tx.v:45]
+WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/uart_tx.v:46]
+WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/uart_tx.v:47]
+WARNING: [Synth 8-2507] parameter declaration becomes local in uart_tx with formal parameter declaration list [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/uart_tx.v:48]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1205.824 ; gain = 23.641
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1171.270 ; gain = 27.547
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'RORNG_tx' [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/RORNG_tx.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RORNG_tx' [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/RORNG_tx.v:23]
 	Parameter s_Idle bound to: 3'b000 
 	Parameter s_DV bound to: 3'b001 
 	Parameter s_Wait bound to: 3'b010 
-INFO: [Synth 8-6157] synthesizing module 'RORNG' [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/RORNG.v:23]
-	Parameter RO_STAGE bound to: 2 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'RingOscillator' [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/RingOscillator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RORNG' [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/RORNG.v:23]
+	Parameter RO_STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RingOscillator' [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/RingOscillator.v:23]
 	Parameter STAGE bound to: 75 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'invert' [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/invert.v:23]
-INFO: [Synth 8-6157] synthesizing module 'LUT1' [D:/Vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39137]
+INFO: [Synth 8-6157] synthesizing module 'invert' [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/invert.v:23]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [D:/vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39137]
 	Parameter INIT bound to: 2'b01 
-INFO: [Synth 8-6155] done synthesizing module 'LUT1' (1#1) [D:/Vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39137]
-INFO: [Synth 8-6155] done synthesizing module 'invert' (2#1) [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/invert.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'RingOscillator' (3#1) [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/RingOscillator.v:23]
-INFO: [Synth 8-6157] synthesizing module 'FDRE' [D:/Vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:13724]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (1#1) [D:/vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39137]
+INFO: [Synth 8-6155] done synthesizing module 'invert' (2#1) [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/invert.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RingOscillator' (3#1) [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/RingOscillator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [D:/vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:13724]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'FDRE' (4#1) [D:/Vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:13724]
-INFO: [Synth 8-6155] done synthesizing module 'RORNG' (5#1) [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/RORNG.v:23]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/uart_tx.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (4#1) [D:/vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:13724]
+INFO: [Synth 8-6155] done synthesizing module 'RORNG' (5#1) [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/RORNG.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/uart_tx.v:33]
 	Parameter CLKS_PER_BIT bound to: 104 - type: integer 
 	Parameter s_IDLE bound to: 3'b000 
 	Parameter s_TX_START_BIT bound to: 3'b001 
 	Parameter s_TX_DATA_BITS bound to: 3'b010 
 	Parameter s_TX_STOP_BIT bound to: 3'b011 
 	Parameter s_CLEANUP bound to: 3'b100 
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (6#1) [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/uart_tx.v:33]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/RORNG_tx.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'RORNG_tx' (7#1) [D:/Quantum/DynamicCircuit/DynamicCircuit.srcs/sources_1/new/RORNG_tx.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (6#1) [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/uart_tx.v:33]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/RORNG_tx.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'RORNG_tx' (7#1) [D:/Quantum/DynamicCircuit-new-/DynamicCircuit.srcs/sources_1/new/RORNG_tx.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1258.441 ; gain = 76.258
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1224.918 ; gain = 81.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1276.367 ; gain = 94.184
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1224.918 ; gain = 81.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1276.367 ; gain = 94.184
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1224.918 ; gain = 81.195
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1288.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1224.918 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Quantum/DynamicCircuit/Cmod-A7-Master.xdc]
-Finished Parsing XDC File [D:/Quantum/DynamicCircuit/Cmod-A7-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Quantum/DynamicCircuit/Cmod-A7-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/RORNG_tx_propImpl.xdc].
+Parsing XDC File [D:/Quantum/DynamicCircuit-new-/Cmod-A7-Master.xdc]
+Finished Parsing XDC File [D:/Quantum/DynamicCircuit-new-/Cmod-A7-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Quantum/DynamicCircuit-new-/Cmod-A7-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/RORNG_tx_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/RORNG_tx_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1381.410 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1334.031 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1381.410 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1334.031 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1334.031 ; gain = 190.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1334.031 ; gain = 190.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1334.031 ; gain = 190.309
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'uart_tx'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'RORNG_tx'
@@ -122,7 +122,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'RORNG_tx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1334.031 ; gain = 190.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -131,8 +131,6 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input    7 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 1     
-+---XORs : 
-	                2 Bit    Wide XORs := 1     
 +---Registers : 
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
@@ -163,25 +161,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1334.031 ; gain = 190.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1334.031 ; gain = 190.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1334.031 ; gain = 190.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1348.977 ; gain = 205.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -193,19 +191,19 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1348.977 ; gain = 205.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1348.977 ; gain = 205.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1348.977 ; gain = 205.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -222,34 +220,34 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |BUFG |     1|
-|2     |LUT1 |   150|
-|3     |LUT2 |     3|
+|2     |LUT1 |    75|
+|3     |LUT2 |     2|
 |4     |LUT3 |    10|
 |5     |LUT4 |     6|
 |6     |LUT5 |     5|
 |7     |LUT6 |     7|
-|8     |FDRE |    25|
+|8     |FDRE |    24|
 |9     |IBUF |     1|
 |10    |OBUF |     1|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1348.977 ; gain = 205.254
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1381.410 ; gain = 94.184
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1381.410 ; gain = 199.227
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1348.977 ; gain = 96.141
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1348.977 ; gain = 205.254
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1381.410 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1348.977 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1388.887 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1364.824 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 32 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1388.887 ; gain = 206.703
-INFO: [Common 17-1381] The checkpoint 'D:/Quantum/DynamicCircuit/DynamicCircuit.runs/synth_1/RORNG_tx.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1364.824 ; gain = 221.102
+INFO: [Common 17-1381] The checkpoint 'D:/Quantum/DynamicCircuit-new-/DynamicCircuit.runs/synth_1/RORNG_tx.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file RORNG_tx_utilization_synth.rpt -pb RORNG_tx_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 10 15:22:50 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 11 09:31:41 2024...

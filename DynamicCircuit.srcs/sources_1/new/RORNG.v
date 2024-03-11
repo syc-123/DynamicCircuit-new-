@@ -21,7 +21,7 @@
 
 
 module RORNG#(
-    parameter RO_STAGE = 2
+    parameter RO_STAGE = 4
     )(
     input sysclk,
     input En,
