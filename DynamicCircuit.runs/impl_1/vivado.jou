@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Mar 11 10:02:02 2024
-# Process ID: 23076
-# Current directory: D:/Quantum/DynamicCircuit-new-/DynamicCircuit.runs/impl_1
-# Command line: vivado.exe -log RORNG_tx.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source RORNG_tx.tcl -notrace
-# Log file: D:/Quantum/DynamicCircuit-new-/DynamicCircuit.runs/impl_1/RORNG_tx.vdi
-# Journal file: D:/Quantum/DynamicCircuit-new-/DynamicCircuit.runs/impl_1\vivado.jou
+# Start of session at: Tue Mar 12 14:45:46 2024
+# Process ID: 11200
+# Current directory: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/impl_1
+# Command line: vivado.exe -log QMesaure_tx.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source QMesaure_tx.tcl -notrace
+# Log file: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/impl_1/QMesaure_tx.vdi
+# Journal file: D:/Quantum/DynamicCircuit/DynamicCircuit.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source RORNG_tx.tcl -notrace
+source QMesaure_tx.tcl -notrace

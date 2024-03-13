@@ -24,16 +24,10 @@ module H_tb(
 
     );
     
-    reg signed [31:0] c0;
-    reg signed [31:0] c1;
-    wire signed [31:0] t0;
-    wire signed [31:0] t1;
-    
-    reg signed [3:0] f0 = 4'b1001;
-    reg signed [3:0] f1 = 4'b0111;
-    
-    reg signed [7:0] r;
-    reg unsigned r1;
+    reg [31:0] c0;
+    reg [31:0] c1;
+    wire [31:0] t0;
+    wire [31:0] t1;
     
     Hadamard H_test (
         .i_q0(c0),
@@ -44,19 +38,9 @@ module H_tb(
     
     initial begin
     
-    c0 <= 0;
-    c1 <= 0;
-    
-    r <= f0 * f1;
-    if(f0 > f1)
-        r1 = 0;
-    else
-        r1 = 1;
     
     #100;
       
-//    c0 <= {8'd1,8'd2,8'd3,8'd4};
-//    c1 <= {8'd5,8'd6,8'd7,8'd8};
     c0 <= {16'd10,16'd20};
     c1 <= {16'd30,16'd40};
     #100

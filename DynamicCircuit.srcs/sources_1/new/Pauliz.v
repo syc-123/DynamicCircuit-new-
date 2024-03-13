@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//pauli z = [1 0; 0 -1]
 
 module Pauliz(    
     input signed [31:0] i_q0,
@@ -26,9 +27,19 @@ module Pauliz(
     output signed [31:0] o_q0,
     output signed [31:0] o_q1
     );
+    
+    reg signed [15:0] r_q1_r = 0;
+    reg signed [15:0] r_q1_i = 0;
+    
+    reg signed [15:0] o_q1_r = 0;
+    reg signed [15:0] o_q1_i = 0; 
 
+    always@(*)begin
+        o_q1_r <= 0 - r_q1_r;
+        o_q1_i <= 0 - r_q1_i;
+    end
     
     assign o_q0 = i_q0;
-    assign o_q1 = 0 - i_q1;
+    assign o_q1 = {o_q1_r, o_q1_i};
     
 endmodule

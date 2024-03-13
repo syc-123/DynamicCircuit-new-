@@ -1,8 +1,15 @@
 # allow combinatorial loop
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[0].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[0].ro/xn/y];
 #set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[1].ro/xn/y];
 #set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[2].ro/xn/y];
 #set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[3].ro/xn/y];
+
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets nolabel_line48/RNG/genblk1[0].ro/xn/y];
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets nolabel_line48/RNG/genblk1[1].ro/xn/y];
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets nolabel_line48/RNG/genblk1[2].ro/xn/y];
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets nolabel_line48/RNG/genblk1[3].ro/xn/y];
+
+
 
 ## This file is a general .xdc for the CmodA7 rev. B
 ## To use it in a project:
@@ -14,8 +21,8 @@ set_property -dict { PACKAGE_PIN L17   IOSTANDARD LVCMOS33 } [get_ports { sysclk
 #create_clock -add -name sys_clk_pin -period 83.33 -waveform {0 41.66} [get_ports {sysclk}];
 
 ## LEDs
-#set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { rn_out }]; #IO_L12N_T1_MRCC_16 Sch=led[1]
-#set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { led[1] }]; #IO_L13P_T2_MRCC_16 Sch=led[2]
+set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { QMeasure_test }]; #IO_L12N_T1_MRCC_16 Sch=led[1]
+set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { Measure_done_test }]; #IO_L13P_T2_MRCC_16 Sch=led[2]
 
 ## RGB LED
 #set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVCMOS33 } [get_ports { led0_b }]; #IO_L14N_T2_SRCC_16 Sch=led0_b
@@ -74,7 +81,9 @@ set_property -dict { PACKAGE_PIN L17   IOSTANDARD LVCMOS33 } [get_ports { sysclk
 #set_property -dict { PACKAGE_PIN U1    IOSTANDARD LVCMOS33 } [get_ports { pio31 }]; #IO_L3N_T0_DQS_34 Sch=pio[31]
 #set_property -dict { PACKAGE_PIN W2    IOSTANDARD LVCMOS33 } [get_ports { pio32 }]; #IO_L5N_T0_34 Sch=pio[32]
 #set_property -dict { PACKAGE_PIN V2    IOSTANDARD LVCMOS33 } [get_ports { pio33 }]; #IO_L5P_T0_34 Sch=pio[33]
-set_property -dict { PACKAGE_PIN W3    IOSTANDARD LVCMOS33 } [get_ports { o_Tx_Serial }]; #IO_L6N_T0_VREF_34 Sch=pio[34]
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#set_property -dict { PACKAGE_PIN W3    IOSTANDARD LVCMOS33 } [get_ports { o_Tx_Serial }]; #IO_L6N_T0_VREF_34 Sch=pio[34]
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #set_property -dict { PACKAGE_PIN V3    IOSTANDARD LVCMOS33 } [get_ports { pio35 }]; #IO_L6P_T0_34 Sch=pio[35]
 #set_property -dict { PACKAGE_PIN W5    IOSTANDARD LVCMOS33 } [get_ports { pio36 }]; #IO_L12P_T1_MRCC_34 Sch=pio[36]
 #set_property -dict { PACKAGE_PIN V4    IOSTANDARD LVCMOS33 } [get_ports { pio37 }]; #IO_L11N_T1_SRCC_34 Sch=pio[37]

@@ -1,64 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710163931">
-  <File Type="ROUTE-PWR" Name="RORNG_tx_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="RORNG_tx.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="RORNG_tx_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="RORNG_tx_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="RORNG_tx.msk"/>
-  <File Type="ROUTE-CLK" Name="RORNG_tx_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="RORNG_tx.vdi"/>
-  <File Type="BG-BIT" Name="RORNG_tx.bit"/>
-  <File Type="BG-DRC" Name="RORNG_tx.drc"/>
-  <File Type="BG-BGN" Name="RORNG_tx.bgn"/>
-  <File Type="BG-BIN" Name="RORNG_tx.bin"/>
-  <File Type="BITSTR-RBT" Name="RORNG_tx.rbt"/>
-  <File Type="BITSTR-NKY" Name="RORNG_tx.nky"/>
-  <File Type="BITSTR-BMM" Name="RORNG_tx_bd.bmm"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="RORNG_tx_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-MMI" Name="RORNG_tx.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="RORNG_tx.sysdef"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710269114">
+  <File Type="BITSTR-BMM" Name="QMesaure_tx_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="QMesaure_tx_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="QMesaure_tx_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="QMesaure_tx_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="QMesaure_tx.tcl"/>
+  <File Type="OPT-TIMING" Name="QMesaure_tx_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="QMesaure_tx_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="QMesaure_tx_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="QMesaure_tx_reports.tcl"/>
+  <File Type="OPT-DRC" Name="QMesaure_tx_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="QMesaure_tx.hwdef"/>
+  <File Type="PWROPT-DCP" Name="QMesaure_tx_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="QMesaure_tx_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="QMesaure_tx_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="QMesaure_tx_placed.dcp"/>
+  <File Type="PLACE-IO" Name="QMesaure_tx_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="QMesaure_tx_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="QMesaure_tx_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="QMesaure_tx_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="QMesaure_tx_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="QMesaure_tx_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="QMesaure_tx_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="QMesaure_tx_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="QMesaure_tx_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="QMesaure_tx.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="QMesaure_tx_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="QMesaure_tx_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="QMesaure_tx_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="QMesaure_tx.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="QMesaure_tx_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="QMesaure_tx_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="QMesaure_tx_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="QMesaure_tx_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="QMesaure_tx_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="QMesaure_tx_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="QMesaure_tx_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="QMesaure_tx.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="QMesaure_tx_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="QMesaure_tx_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="QMesaure_tx_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="QMesaure_tx_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="QMesaure_tx_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="QMesaure_tx_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="QMesaure_tx_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="QMesaure_tx_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="QMesaure_tx_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="QMesaure_tx_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="QMesaure_tx_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="QMesaure_tx_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="QMesaure_tx_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="QMesaure_tx_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="QMesaure_tx_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="QMesaure_tx_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="QMesaure_tx_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="QMesaure_tx_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="QMesaure_tx_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="QMesaure_tx_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="QMesaure_tx_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="QMesaure_tx.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="QMesaure_tx_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="QMesaure_tx.rbt"/>
+  <File Type="BITSTR-NKY" Name="QMesaure_tx.nky"/>
+  <File Type="PDI-FILE" Name="QMesaure_tx.pdi"/>
+  <File Type="RCFI_FILE" Name="QMesaure_tx.rcfi"/>
+  <File Type="CFI_FILE" Name="QMesaure_tx.cfi"/>
+  <File Type="RNPI_FILE" Name="QMesaure_tx.rnpi"/>
+  <File Type="NPI_FILE" Name="QMesaure_tx.npi"/>
+  <File Type="RBD_FILE" Name="QMesaure_tx.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="RORNG_tx.ltx"/>
+  <File Type="BITSTR-LTX" Name="QMesaure_tx.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="QMesaure_tx.sysdef"/>
+  <File Type="BG-BGN" Name="QMesaure_tx.bgn"/>
+  <File Type="BG-DRC" Name="QMesaure_tx.drc"/>
+  <File Type="RDI-RDI" Name="QMesaure_tx.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-DRC" Name="RORNG_tx_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="RORNG_tx.hwdef"/>
-  <File Type="PLACE-IO" Name="RORNG_tx_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="RORNG_tx_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="RORNG_tx_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="RORNG_tx_control_sets_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="RORNG_tx_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="RORNG_tx_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="RORNG_tx_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="RORNG_tx_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="RORNG_tx_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="RORNG_tx_route_status.pb"/>
-  <File Type="ROUTE-DCP" Name="RORNG_tx_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="RORNG_tx_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="RORNG_tx_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="RORNG_tx_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="RORNG_tx_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="RORNG_tx_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW" Name="RORNG_tx_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="RORNG_tx_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="RORNG_tx_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="RORNG_tx_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="RORNG_tx_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="RORNG_tx_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="RORNG_tx_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="RORNG_tx_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="RORNG_tx_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="RORNG_tx_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="RORNG_tx_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="RORNG_tx_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="RORNG_tx_methodology_drc_routed.rpx"/>
-  <File Type="PDI-FILE" Name="RORNG_tx.pdi"/>
-  <File Type="RCFI_FILE" Name="RORNG_tx.rcfi"/>
-  <File Type="CFI_FILE" Name="RORNG_tx.cfi"/>
-  <File Type="RNPI_FILE" Name="RORNG_tx.rnpi"/>
-  <File Type="NPI_FILE" Name="RORNG_tx.npi"/>
-  <File Type="RBD_FILE" Name="RORNG_tx.rbd"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/QMeasure.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/RORNG.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -80,21 +105,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/QMesaure_tx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/uart_tx.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/RORNG_tx.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/QMeasure.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -168,7 +194,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="RORNG_tx"/>
+      <Option Name="TopModule" Val="QMesaure_tx"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -191,9 +217,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

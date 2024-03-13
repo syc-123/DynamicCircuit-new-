@@ -26,11 +26,13 @@
 // All coefficient are 16-bit fixed point signed decimals. The first bit is a sign identifier, where 0 indicates positive and 1 indicates negative.
 // The range of all coefficients is within -1 to 1.
 
+//paulix = [0 1; 1 0]
+
 module Paulix(    
-    input signed [31:0] i_q0,
-    input signed [31:0] i_q1,
-    output signed [31:0] o_q0,
-    output signed [31:0] o_q1              
+    input [31:0] i_q0,
+    input [31:0] i_q1,
+    output [31:0] o_q0,
+    output [31:0] o_q1              
     );
 
     assign o_q0 = i_q1;

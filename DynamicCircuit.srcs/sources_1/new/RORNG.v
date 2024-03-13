@@ -35,20 +35,20 @@ module RORNG#(
     wire [RO_STAGE-1:0] ff_out;
     reg r_XOR;
     
-    reg clk_slow = 1'b0;
-    integer counter = 0;
+//    reg clk_slow = 1'b0;
+//    integer counter = 0;
     //change when need
     
-    assign En_n = ~En;
+//    assign En_n = ~En;
     
-    always@(posedge sysclk) begin
-        if(counter == 3000000)begin
-            clk_slow <= ~clk_slow;
-            counter <= 0;
-        end else begin
-            counter <= counter + 1;
-        end
-    end
+//    always@(posedge sysclk) begin
+//        if(counter == 3000000)begin
+//            clk_slow <= ~clk_slow;
+//            counter <= 0;
+//        end else begin
+//            counter <= counter + 1;
+//        end
+//    end
     
     genvar i;
     

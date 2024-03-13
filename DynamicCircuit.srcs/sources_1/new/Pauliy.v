@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//pauli y = [0 -i; i 0]
 
 module Pauliy(    
     input signed [31:0] i_q0,
@@ -27,8 +28,24 @@ module Pauliy(
     output signed [31:0] o_q1
     );
 
-    
-    assign o_q0 = {i_q1[15:0],(0-i_q1[31:16])};
-    assign o_q1 = {(0-i_q0[15:0]),i_q1[31:16]};
+    reg signed [15:0] r_q0_r = 0;
+    reg signed [15:0] r_q0_i = 0;    
+    reg signed [15:0] r_q1_r = 0;
+    reg signed [15:0] r_q1_i = 0;
+
+    reg signed [15:0] o_q0_r = 0;
+    reg signed [15:0] o_q0_i = 0;                
+    reg signed [15:0] o_q1_r = 0;           
+    reg signed [15:0] o_q1_i = 0; 
+               
+    always@(*)begin
+        o_q0_r <= 0 - r_q1_i;
+        o_q0_i <= r_q1_r;
+        o_q1_r <= r_q0_i;
+        o_q1_i <= 0 - r_q0_r;
+    end           
+               
+    assign o_q0 = {o_q0_r, o_q0_i};
+    assign o_q1 = {o_q1_r, o_q1_i};
     
 endmodule
