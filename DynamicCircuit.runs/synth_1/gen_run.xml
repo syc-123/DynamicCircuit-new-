@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710269114">
-  <File Type="PA-TCL" Name="QMesaure_tx.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="QMesaure_tx_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="QMesaure_tx_reports.tcl"/>
-  <File Type="RDS-RDS" Name="QMesaure_tx.vds"/>
-  <File Type="RDS-UTIL" Name="QMesaure_tx_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="QMesaure_tx_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="QMesaure_tx.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="QMesaure_tx_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="QMesaure_tx_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1710357110">
+  <File Type="PA-TCL" Name="Sample_Circuit1.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Sample_Circuit1_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Sample_Circuit1_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Sample_Circuit1.vds"/>
+  <File Type="RDS-UTIL" Name="Sample_Circuit1_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Sample_Circuit1_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Sample_Circuit1.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Sample_Circuit1_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Sample_Circuit1_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Paulix.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/QMeasure.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/QValid.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -39,32 +53,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/QMesaure_tx.v">
+    <File Path="$PSRCDIR/sources_1/new/Sample_Circuit1.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/uart_tx.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/RORNG_tx.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/QValid.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -94,14 +84,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Paulix.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/Pauliy.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -118,7 +100,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/QMesaure_tx.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RORNG_tx.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/counter.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_tx.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -128,7 +134,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="QMesaure_tx"/>
+      <Option Name="TopModule" Val="Sample_Circuit1"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

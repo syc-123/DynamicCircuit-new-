@@ -46,6 +46,7 @@ module QMesaure_tx(
     
     
     QMeasure(
+     1'b1,
      clk_slow,
      i_q0,
      i_q1,

@@ -25,10 +25,11 @@ module QValid(
     input [31:0] i_q1,
     output [31:0] o_q0,
     output [31:0] o_q1,
-    output Q_valid
+    output [1:0] Q_valid
     );
     
-    reg Q_valid_r = 1'b1;
+    //set the default value of Q_valid to 11 to imply the validation state is not over
+    reg [1:0] Q_valid_r = 2'b11;
     
     reg signed [15:0] q0_r;
     reg signed [15:0] q0_i;
@@ -63,11 +64,11 @@ module QValid(
 
         
         if(prob_sum < 32'h3ffe0000)
-            Q_valid_r <= 1'b0;
+            Q_valid_r <= 2'b00;
         else if(prob_sum > 32'h40000000) begin
-            Q_valid_r <= 1'b0;
+            Q_valid_r <= 2'b00;
         end else
-            Q_valid_r = 1'b1;
+            Q_valid_r = 2'b01;
         end   
            
         //if the sum of two probability is 1, then the qubit is valid, else invalid
