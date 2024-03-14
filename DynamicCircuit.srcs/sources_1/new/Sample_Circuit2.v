@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2024/03/13 09:49:10
+// Create Date: 2024/03/14 09:06:17
 // Design Name: 
-// Module Name: Sample_Circuit1
+// Module Name: Sample_Circuit2
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,12 +19,10 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-// this is a simple sample quantum circuit that simulate the conditional reset operation
-// random state -> measurement -> zero state: nothing to do -> measurement (the result should always be 0)
-//                             -> one state: -> pauli x
-
-
-module Sample_Circuit1(
+// this is another sample quantum circuit
+// random state -> Hadamard gate -> measure -> zero state -> nothing to do -> measure (the result should always be 0)
+//                                          -> one state -> x gate
+module Sample_Circuit2(
     input sysclk,
     input [31: 0] i_q0,
     input [31: 0] i_q1,
@@ -33,11 +31,13 @@ module Sample_Circuit1(
     output [1:0] m_result
     );
     
-    localparam [1:0]  s_valid = 2'b00,
-                      s_measure1 = 2'b01,
-                      s_measure2 = 2'b10,
-                      s_x = 2'b11; 
-    reg [1:0] state = 2'b00;
+    localparam [2:0]  s_valid = 3'b000,
+                      s_measure1 = 3'b001,
+                      s_measure2 = 3'b010,
+                      s_x = 3'b011,
+                      s_h = 3'b100;                      
+                       
+    reg [2:0] state = 3'b000;
            
     reg [31:0] r_q0 = 0;
     reg [31:0] r_q1 = 0;
@@ -48,7 +48,7 @@ module Sample_Circuit1(
     //01 stands for measured as 1
     reg [1:0] r_result = 2'b11;
     
-    reg m_en = 1'b0;
+    reg m_en = 1'b0;    
     
     wire [31:0] w_q0;
     wire [31:0] w_q1;
@@ -84,6 +84,15 @@ module Sample_Circuit1(
     w_x_q0,
     w_x_q1              
     );
+    
+    wire [31:0] w_h_q0;
+    wire [31:0] w_h_q1;    
+    Hadamard H(
+    r_q0,
+    r_q1,
+    w_h_q0,
+    w_h_q1    
+    );
         
     always@(posedge sysclk) begin
         case(state)
@@ -95,10 +104,16 @@ module Sample_Circuit1(
                 end else if (w_valid == 2'b01) begin
                     r_q0 <= w_q0;
                     r_q1 <= w_q1;                   
-                    state <= s_measure1;
+                    state <= s_h;
                 end else begin
                     state <= s_valid;
                 end        
+            end
+            
+            s_h:begin
+                r_q0 <= w_h_q0;
+                r_q1 <= w_h_q1;
+                state <= s_measure1;    
             end
             
             s_measure1:begin
@@ -145,5 +160,5 @@ module Sample_Circuit1(
     assign o_q0 = r_q0;
     assign o_q1 = r_q1;    
     assign m_result = r_result;
-    
+        
 endmodule
