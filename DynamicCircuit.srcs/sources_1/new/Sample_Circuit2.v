@@ -24,10 +24,10 @@
 //                                          -> one state -> x gate
 module Sample_Circuit2(
     input sysclk,
-    input [31: 0] i_q0,
-    input [31: 0] i_q1,
-    output [31: 0] o_q0,
-    output [31: 0] o_q1,
+    input [31: 0] i_qa,
+    input [31: 0] i_qb,
+    output [31: 0] o_qa,
+    output [31: 0] o_qb,
     output [1:0] m_result
     );
     
@@ -39,8 +39,8 @@ module Sample_Circuit2(
                        
     reg [2:0] state = 3'b000;
            
-    reg [31:0] r_q0 = 0;
-    reg [31:0] r_q1 = 0;
+    reg [31:0] r_qa = 0;
+    reg [31:0] r_qb = 0;
     
     //set the output of m_result to 11 which stands for no result yet.
     //10 stands for invalid qubit state
@@ -50,60 +50,60 @@ module Sample_Circuit2(
     
     reg m_en = 1'b0;    
     
-    wire [31:0] w_q0;
-    wire [31:0] w_q1;
+    wire [31:0] w_qa;
+    wire [31:0] w_qb;
     wire [1:0] w_valid;
     QValid V(
-    i_q0,
-    i_q1,
-    w_q0,
-    w_q1,
+    i_qa,
+    i_qb,
+    w_qa,
+    w_qb,
     w_valid
     );
     
-    wire [31:0] w_m1_q0;
-    wire [31:0] w_m1_q1;
+    wire [31:0] w_m1_qa;
+    wire [31:0] w_m1_qb;
     wire w_m1_value;
     wire w_m1_done;  
     QMeasure M1(
     m_en,
     sysclk,
-    r_q0,
-    r_q1,
-    w_m1_q0,
-    w_m1_q1,
+    r_qa,
+    r_qb,
+    w_m1_qa,
+    w_m1_qb,
     w_m1_value,
     w_m1_done
     );  
     
-    wire [31:0] w_x_q0;
-    wire [31:0] w_x_q1;
+    wire [31:0] w_x_qa;
+    wire [31:0] w_x_qb;
     Paulix X(    
-    r_q0,
-    r_q1,
-    w_x_q0,
-    w_x_q1              
+    r_qa,
+    r_qb,
+    w_x_qa,
+    w_x_qb              
     );
     
-    wire [31:0] w_h_q0;
-    wire [31:0] w_h_q1;    
+    wire [31:0] w_h_qa;
+    wire [31:0] w_h_qb;    
     Hadamard H(
-    r_q0,
-    r_q1,
-    w_h_q0,
-    w_h_q1    
+    r_qa,
+    r_qb,
+    w_h_qa,
+    w_h_qb    
     );
         
     always@(posedge sysclk) begin
         case(state)
             s_valid:begin
                 if(w_valid == 2'b00)begin
-                    r_q0 <= 32'h00000000;
-                    r_q1 <= 32'h00000000;                                
+                    r_qa <= 32'h00000000;
+                    r_qb <= 32'h00000000;                                
                     r_result <= 2'b10;    
                 end else if (w_valid == 2'b01) begin
-                    r_q0 <= w_q0;
-                    r_q1 <= w_q1;                   
+                    r_qa <= w_qa;
+                    r_qb <= w_qb;                   
                     state <= s_h;
                 end else begin
                     state <= s_valid;
@@ -111,8 +111,8 @@ module Sample_Circuit2(
             end
             
             s_h:begin
-                r_q0 <= w_h_q0;
-                r_q1 <= w_h_q1;
+                r_qa <= w_h_qa;
+                r_qb <= w_h_qb;
                 state <= s_measure1;    
             end
             
@@ -122,8 +122,8 @@ module Sample_Circuit2(
                     state <= s_measure1;
                 end else begin
                     m_en <= 1'b0;
-                    r_q0 <= w_m1_q0;
-                    r_q1 <= w_m1_q1;
+                    r_qa <= w_m1_qa;
+                    r_qb <= w_m1_qb;
                     if(w_m1_value == 1'b0) begin
                         state <= s_measure2;
                     end else begin
@@ -133,8 +133,8 @@ module Sample_Circuit2(
             end
             
             s_x:begin
-                r_q0 <= w_x_q0;
-                r_q1 <= w_x_q1;
+                r_qa <= w_x_qa;
+                r_qb <= w_x_qb;
                 state <= s_measure2;
             end
             
@@ -144,8 +144,8 @@ module Sample_Circuit2(
                     state <= s_measure2;
                 end else begin
                     m_en <= 1'b0;
-                    r_q0 <= w_m1_q0;
-                    r_q1 <= w_m1_q1;
+                    r_qa <= w_m1_qa;
+                    r_qb <= w_m1_qb;
                     if(w_m1_value == 1'b0) begin
                         r_result <= 1'b00;
                     end else begin
@@ -157,8 +157,8 @@ module Sample_Circuit2(
         endcase    
     end
        
-    assign o_q0 = r_q0;
-    assign o_q1 = r_q1;    
+    assign o_qa = r_qa;
+    assign o_qb = r_qb;    
     assign m_result = r_result;
         
 endmodule
