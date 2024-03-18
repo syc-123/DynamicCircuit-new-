@@ -4,6 +4,18 @@ set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[0].ro/xn/y];
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[1].ro/xn/y];
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[2].ro/xn/y];
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[3].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[4].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[5].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[6].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[7].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[8].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[9].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[10].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[11].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[12].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[13].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[14].ro/xn/y];
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets ro/genblk1[15].ro/xn/y];
 
 #QMeasure_tx
 #set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets nolabel_line48/RNG/genblk1[0].ro/xn/y];
@@ -23,8 +35,8 @@ set_property -dict { PACKAGE_PIN L17   IOSTANDARD LVCMOS33 } [get_ports { sysclk
 #create_clock -add -name sys_clk_pin -period 83.33 -waveform {0 41.66} [get_ports {sysclk}];
 
 ## LEDs
-set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { QMeasure_test }]; #IO_L12N_T1_MRCC_16 Sch=led[1]
-set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { Measure_done_test }]; #IO_L13P_T2_MRCC_16 Sch=led[2]
+#set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { QMeasure_test }]; #IO_L12N_T1_MRCC_16 Sch=led[1]
+#set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { Measure_done_test }]; #IO_L13P_T2_MRCC_16 Sch=led[2]
 
 ## RGB LED
 #set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVCMOS33 } [get_ports { led0_b }]; #IO_L14N_T2_SRCC_16 Sch=led0_b
@@ -84,7 +96,7 @@ set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { Measur
 #set_property -dict { PACKAGE_PIN W2    IOSTANDARD LVCMOS33 } [get_ports { pio32 }]; #IO_L5N_T0_34 Sch=pio[32]
 #set_property -dict { PACKAGE_PIN V2    IOSTANDARD LVCMOS33 } [get_ports { pio33 }]; #IO_L5P_T0_34 Sch=pio[33]
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#set_property -dict { PACKAGE_PIN W3    IOSTANDARD LVCMOS33 } [get_ports { o_Tx_Serial }]; #IO_L6N_T0_VREF_34 Sch=pio[34]
+set_property -dict { PACKAGE_PIN W3    IOSTANDARD LVCMOS33 } [get_ports { o_Tx_Serial }]; #IO_L6N_T0_VREF_34 Sch=pio[34]
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #set_property -dict { PACKAGE_PIN V3    IOSTANDARD LVCMOS33 } [get_ports { pio35 }]; #IO_L6P_T0_34 Sch=pio[35]
 #set_property -dict { PACKAGE_PIN W5    IOSTANDARD LVCMOS33 } [get_ports { pio36 }]; #IO_L12P_T1_MRCC_34 Sch=pio[36]
